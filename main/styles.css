@@ -10,6 +10,16 @@
     margin-bottom: 20px;
     animation: fadeIn 2s ease-out forwards;
 }
+.notification {
+    display: none; /* Початково приховане */
+    padding: 15px;
+    background-color: #4CAF50; /* Зелений фон */
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

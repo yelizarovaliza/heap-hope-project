@@ -1,66 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card');
-    let currentIndex = 0;
+// DOM
+const swiper = document.querySelector('#swiper');
+const like = document.querySelector('#like');
+const dislike = document.querySelector('#dislike');
 
-    // Встановлює першу картку видимою на початку
-    cards[currentIndex].classList.add('visible');
+const startups = JSON.parse(localStorage.getItem('startups')) || [];
 
-    function handleSwipe(direction) {
-        // Додаємо клас для анімації зникнення картки вліво або вправо
-        if (direction === 'left') {
-            cards[currentIndex].classList.add('out-left');
-        } else if (direction === 'right') {
-            cards[currentIndex].classList.add('out-right');
+
+// variables
+let cardCount = 0;
+
+// functions
+function appendNewCard() {
+    if (cardCount >= startups.length) return;
+
+    const startup = startups[cardCount];
+    const card = new Card({
+        imageUrl: startup.presentation,
+        onDismiss: appendNewCard,
+        onLike: () => {
+            like.style.animationPlayState = 'running';
+            like.classList.toggle('trigger');
+        },
+        onDislike: () => {
+            dislike.style.animationPlayState = 'running';
+            dislike.classList.toggle('trigger');
         }
-
-        // Видаляємо клас видимості через невеликий проміжок часу для плавного переходу
-        setTimeout(() => {
-            cards[currentIndex].classList.remove('visible', 'out-left', 'out-right');
-            currentIndex++;
-
-            if (currentIndex < cards.length) {
-                cards[currentIndex].classList.add('visible');
-            } else {
-                alert('Ви переглянули всі стартапи!');
-            }
-        }, 500); // Час відповідає тривалості CSS transition
-    }
-
-    let startX;
-
-    // Додаємо обробники для початку свайпу (touchstart) і завершення свайпу (touchend)
-    cards.forEach(card => {
-        card.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-        });
-
-        card.addEventListener('touchend', (e) => {
-            const endX = e.changedTouches[0].clientX;
-            const deltaX = endX - startX;
-
-            if (deltaX < -100) {
-                handleSwipe('left'); // Свайп вліво
-            } else if (deltaX > 100) {
-                handleSwipe('right'); // Свайп вправо
-            }
-        });
     });
 
-    // Підтримка свайпів для десктопних користувачів
-    cards.forEach(card => {
-        card.addEventListener('mousedown', (e) => {
-            startX = e.clientX;
-        });
+    swiper.append(card.element);
+    cardCount++;
 
-        card.addEventListener('mouseup', (e) => {
-            const endX = e.clientX;
-            const deltaX = endX - startX;
-
-            if (deltaX < -100) {
-                handleSwipe('left');
-            } else if (deltaX > 100) {
-                handleSwipe('right');
-            }
-        });
+    // Оновлюємо індексацію карток для плавної анімації
+    const cards = swiper.querySelectorAll('.card:not(.dismissing)');
+    cards.forEach((card, index) => {
+        card.style.setProperty('--i', index);
     });
-});
+}
+
+// first 5 cards
+for (let i = 0; i < 5; i++) {
+    appendNewCard();
+}

@@ -26,6 +26,7 @@
 </header>
 
 <main>
+    <div id="notification" class="notification"></div>
     <section class="intro">
         <h2 id="animatedText">Хакатон</h2>
         <h1>Хто ми? <br>  платформа для підтримки стартапів для ЗСУ</h1>
@@ -33,11 +34,24 @@
             дтдтдтдтдтдтдтддттд
         </p>
         <img src="../images/photo_1.png" alt="Story Image" class="intro-image">
-        <a href="/swipe/seeMore.html" class="intro_button">See more</a>
+        <a href="../swipe/seeMore.html" class="intro_button">See more</a>
     </section>
 
 
 </main>
 <script src="index1.js"></script>
+<script>
+    // Перевірка та відображення повідомлення про успіх
+    const notificationDiv = document.getElementById('notification');
+    const successMessage = localStorage.getItem('registrationSuccess');
+
+    if (successMessage) {
+        notificationDiv.textContent = successMessage;
+        notificationDiv.style.display = 'block';
+
+        // Видаляємо повідомлення, щоб воно не з'являлось після перезавантаження сторінки
+        localStorage.removeItem('registrationSuccess');
+    }
+</script>
 </body>
 </html>
