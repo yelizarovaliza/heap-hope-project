@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Profile</title>
+</head>
+<body>
+<h2>Startup Profile</h2>
+<div id="profileInfo"></div>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const email = urlParams.get('email');
+
+  // Fetch startup data from localStorage
+  const startups = JSON.parse(localStorage.getItem('startups')) || [];
+  const startup = startups.find(su => su.email === email);
+
+  if (startup) {
+    document.getElementById('profileInfo').innerHTML = `
+        <p>Startup Name: ${startup.startupName}</p>
+        <p>Founder Name: ${startup.founderName}</p>
+        <p>Email: ${startup.email}</p>
+        <p>Sector: ${startup.sector}</p>
+        <p>Description: ${startup.description}</p>
+        <img src="${startup.presentation}" alt="Presentation">
+        <video src="${startup.video}" controls></video>
+      `;
+  } else {
+    document.getElementById('profileInfo').innerHTML = `<p>Startup not found.</p>`;
+  }
+</script>
+</body>
+</html>
