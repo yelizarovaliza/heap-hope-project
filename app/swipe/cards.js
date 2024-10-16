@@ -1,11 +1,17 @@
 class Card {
     constructor({
                     imageUrl,
+                    startupName,
+                    sector,
+                    budget,
                     onDismiss,
                     onLike,
                     onDislike
                 }) {
         this.imageUrl = imageUrl;
+        this.startupName = startupName;  
+        this.sector = sector;            
+        this.budget = budget;            
         this.onDismiss = onDismiss;
         this.onLike = onLike;
         this.onDislike = onDislike;
@@ -27,9 +33,30 @@ class Card {
     #init = () => {
         const card = document.createElement('div');
         card.classList.add('card');
+
         const img = document.createElement('img');
         img.src = this.imageUrl;
+        img.alt = `Presentation of ${this.startupName}`;
         card.append(img);
+
+        const infoContainer = document.createElement('div');
+        infoContainer.classList.add('card-info');
+        
+        const title = document.createElement('h2');
+        title.textContent = this.startupName;
+
+        const sectorInfo = document.createElement('p');
+        sectorInfo.textContent = `Сектор: ${this.sector}`;
+
+        const budgetInfo = document.createElement('p');
+        budgetInfo.textContent = `Бюджет: ${this.budget} грн`;
+
+       
+        infoContainer.append(title, sectorInfo, budgetInfo);
+        
+       
+        card.append(infoContainer);
+
         this.element = card;
         if (this.#isTouchDevice()) {
             this.#listenToTouchEvents();
@@ -62,7 +89,6 @@ class Card {
 
         document.addEventListener('mouseup', this.#handleMoveUp);
 
-        // prevent card from being dragged
         this.element.addEventListener('dragstart', (e) => {
             e.preventDefault();
         });
