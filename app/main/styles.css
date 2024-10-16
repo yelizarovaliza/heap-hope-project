@@ -7,8 +7,9 @@
 }
 
 .intro h1 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 70px;
+    /* font-family: "Open Sans", sans-serif; */
+    font-family:'Arial Black', Arial, sans-serif;
+    font-size: 50px;
     margin: 20px;
     animation: fadeIn 2s ease-out forwards;
 }
@@ -38,7 +39,7 @@
 }
 
 .intro p {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: 'Avenir Next';
     font-size: 1em;
     color: #ccc;
     max-width: 600px;

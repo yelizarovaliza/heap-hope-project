@@ -29,8 +29,17 @@
             const card = document.createElement('div');
             card.className = 'card';
             card.innerHTML = `
-        <img src="${startup.presentation}" alt="Presentation of ${startup.startupName}" onerror="this.src='default-image-url.jpg';">
-      `;
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="${startup.presentation}" alt="Presentation of ${startup.startupName}" onerror="this.src='default-image-url.jpg';">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="startup-name">${startup.startupName}</h2>
+                        <p><strong>Сектор:</strong> ${startup.sector}</p>
+                        <p><strong>Бюджет:</strong> ${startup.number} грн</p>
+                    </div>
+                </div>
+            `;
             return card;
         };
 

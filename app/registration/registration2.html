@@ -24,10 +24,20 @@
 <main>
   <section class="register">
     <h2>Заповнення профілю</h2>
-    <form action="#" method="post">
+    <form id="registration-form" action="#" method="post">
+
+      <label for="startup-name">Назва стартапу:</label>
+      <input type="text" id="startup-name" name="startup-name" required>
+
+      <label for="founder-name">Ім'я засновника:</label>
+      <input type="text" id="founder-name" name="founder-name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
       <label for="presentation">Завантажте зображення стартапу:</label>
       <input type="file" id="presentation" name="presentation" accept="image/*" required>
+
       <label for="video">Завантажте відео стартапу:</label>
       <input type="file" id="video" name="video" accept="video/*" required>
 
@@ -51,7 +61,7 @@
 </main>
 
 <script>
-  document.querySelector('form').addEventListener('submit', function(event) {
+  document.getElementById('registration-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const startupName = document.getElementById('startup-name').value;
@@ -74,11 +84,12 @@
        
         const newStartup = { startupName, founderName, email, description, sector, presentation, video };
 
+        
         const startups = JSON.parse(localStorage.getItem('startups')) || [];
         startups.push(newStartup);
         localStorage.setItem('startups', JSON.stringify(startups));
 
-        localStorage.setItem('registrationSuccess', 'Стартап успішно зареєстрований!');
+        
         window.location.href = "../main/index.html";
       };
 
