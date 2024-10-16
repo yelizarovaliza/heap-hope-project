@@ -45,38 +45,7 @@
     </script>
 
   </main>
-  <script>
-    document.querySelector('form').addEventListener('submit', function (event) {
-      event.preventDefault();
 
-      const startupName = document.getElementById('startup-name').value;
-      const founderName = document.getElementById('founder-name').value;
-      const email = document.getElementById('email').value;
-      const description = document.getElementById('description').value;
-      const sector = document.getElementById('sector').value;
-      const presentationInput = document.getElementById('presentation');
-
-      const reader = new FileReader();
-      reader.onload = function () {
-        const presentation = reader.result;
-
-        const newStartup = { startupName, founderName, email, description, sector, presentation };
-
-        const startups = JSON.parse(localStorage.getItem('startups')) || [];
-        startups.push(newStartup);
-        localStorage.setItem('startups', JSON.stringify(startups));
-
-        localStorage.setItem('registrationSuccess', 'Стартап успішно зареєстрований!');
-        window.location.href = "../main/index.html";
-      };
-
-      if (presentationInput.files.length > 0) {
-        reader.readAsDataURL(presentationInput.files[0]);
-      } else {
-        alert("Будь ласка, завантажте зображення.");
-      }
-    });
-  </script>
 
 
 </body>

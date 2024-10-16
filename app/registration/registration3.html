@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investor Registration</title>
+  <link rel="stylesheet" href="register_css.css">
+  <link rel="stylesheet" href="../main/additional.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="social-icons">
+      <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="../images/linkedin.png" alt="LinkedIn"></a>
+    </div>
+    <div class="menu">
+      <a href="../login/exit.html" class="button">Вхід</a>
+      <a href="../main/index.html" class="button">Головна</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="register">
+    <h2>Заповнення профілю інвестора</h2>
+    <form id="registrationForm" action="#" method="post">
+      <label for="presentation">Завантажте документ для перевірки вашої особистості:</label>
+      <input type="file" id="presentation" name="presentation" accept="image/*" required>
+      <label for="sector">Оберіть сектор, який цікавить вас:</label>
+      <select id="sector" name="sector" required>
+        <option value="technology">Технології</option>
+        <option value="health">Здоров'я</option>
+        <option value="defense">Оборона</option>
+        <option value="logistics">Логістика</option>
+      </select>
+
+      <button type="submit" class="button">Створити</button>
+    </form>
+  </section>
+</main>
+
+<script>
+  document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const investorName = document.getElementById('founder-name')?.value || 'Анонім';
+    const email = document.getElementById('email')?.value || 'не вказано';
+    const sector = document.getElementById('sector').value;
+    const presentationInput = document.getElementById('presentation');
+
+    if (presentationInput.files.length > 0) {
+      const reader = new FileReader();
+      reader.onload = function() {
+        const presentation = reader.result;
+
+        // Створюємо об'єкт інвестора
+        const newInvestor = { investorName, email, sector, presentation };
+
+        // Отримуємо існуючий масив інвесторів з localStorage або створюємо новий
+        const investors = JSON.parse(localStorage.getItem('investors')) || [];
+        investors.push(newInvestor);
+
+        // Зберігаємо оновлений масив інвесторів у localStorage
+        localStorage.setItem('investors', JSON.stringify(investors));
+
+        // Повідомлення про успішну реєстрацію та перенаправлення на головну сторінку
+        localStorage.setItem('registrationSuccess', 'Інвестор успішно зареєстрований!');
+        window.location.href = "../main/index.html";
+      };
+
+      reader.readAsDataURL(presentationInput.files[0]);
+    } else {
+      alert("Будь ласка, завантажте зображення.");
+    }
+  });
+</script>
+
+</body>
+</html>
