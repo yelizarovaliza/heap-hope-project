@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px; /* Відступи по 100px з кожного боку */
+    width: 100%;
+    box-sizing: border-box;
+}
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+.language-selector {
+    margin-left: auto; /* Pushes the language selector to the far right */
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+.language-option {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.language-option:hover {
+    color: #f05; /* Changes color on hover */
+    text-decoration: underline;
+}
+.menu {
+    display: flex;
+    gap: 10px;
+}
+
+.menu .button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.menu .button:hover {
+    background-color: #f05;
+    color: #fff;
+}
+
+
+
