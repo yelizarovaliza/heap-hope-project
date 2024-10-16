@@ -17,6 +17,7 @@ body {
 }
 
 header {
+    background-color: #000;
     position: absolute;
     top: 20px;
     width: 100%;
@@ -64,7 +65,7 @@ nav {
 .menu .button {
     font-family: "Nunito Sans", sans-serif;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 35px;
     background-color: #fff;
     color: #000;
     text-decoration: none;
