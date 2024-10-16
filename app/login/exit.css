@@ -1,54 +1,55 @@
-
-/* Style for Login Page */
-.login-section {
+body {
+    font-family: 'Arial Black', Arial, sans-serif; /* Шрифт, як у головній */
+    background-color: #A15FFF; /* Колір фону */
+    color: #ffffff; /* Колір тексту */
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+    min-height: 100vh; /* Висота на всю сторінку */
+    margin: 0; /* Вимкнення стандартних відступів */
 }
 
-.login-section h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #f05;
+h2 {
+    font-size: 40px; /* Розмір заголовка */
+    margin-bottom: 20px; /* Відступ нижче заголовка */
 }
 
-.login-options {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-.login-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 5px;
+form {
+    background-color: #000; /* Колір фону форми */
+    border-radius: 15px; /* Закруглені кути */
+    padding: 20px; /* Внутрішні відступи */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Тінь для форм */
+    width: 300px; /* Ширина форми */
 }
 
-.login-button:hover {
-    background-color: #f05;
-    color: #fff;
+label {
+    margin-top: 10px; /* Відступ для ярликів */
+    display: block; /* Ярлики займають весь рядок */
+    font-size: 16px; /* Розмір тексту ярликів */
 }
 
-.signup-link {
-    color: #f05;
-    text-decoration: none;
-    font-weight: bold;
+input, select {
+    width: 100%; /* Ширина елементів введення */
+    padding: 10px; /* Внутрішні відступи */
+    margin-top: 5px; /* Відступ між ярликом та полем вводу */
+    margin-bottom: 15px; /* Відступ між полями */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закруглені кути */
+    background-color: #222; /* Колір фону полів вводу */
+    color: #fff; /* Колір тексту */
 }
 
-.signup-link:hover {
-    text-decoration: underline;
+button {
+    background-color: #ffffff; /* Колір кнопки */
+    color: #000000; /* Колір тексту кнопки */
+    border: none; /* Без рамки */
+    padding: 10px; /* Внутрішні відступи кнопки */
+    border-radius: 5px; /* Закруглені кути */
+    cursor: pointer; /* Курсор у вигляді вказівника при наведенні */
+    width: 100%; /* Ширина кнопки */
+    font-size: 16px; /* Розмір тексту кнопки */
+}
+
+button:hover {
+    background-color: #a55eea; /* Колір кнопки при наведенні */
 }

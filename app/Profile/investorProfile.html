@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investor Profile</title>
+  <link rel="stylesheet" href="investorProfile.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+<div class="container">
+  <h2>Investor Profile</h2>
+  <div id="profileInfo"></div>
+</div>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const email = urlParams.get('email');
+
+  // Fetch investor data from localStorage
+  const investors = JSON.parse(localStorage.getItem('investors')) || [];
+  const investor = investors.find(inv => inv.email === email);
+
+  if (investor) {
+    document.getElementById('profileInfo').innerHTML = `
+        <div class="profile-details">
+          <p><strong>Name:</strong> ${investor.investorName}</p>
+          <p><strong>Email:</strong> ${investor.email}</p>
+          <p><strong>Sector:</strong> ${investor.sector}</p>
+          <img src="${investor.presentation}" alt="Presentation" class="presentation-image">
+        </div>
+      `;
+  } else {
+    document.getElementById('profileInfo').innerHTML = `
+        <div class="not-found">
+          <p>Investor not found.</p>
+        </div>
+      `;
+  }
+</script>
+</body>
+</html>
