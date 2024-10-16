@@ -44,8 +44,6 @@
   document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const investorName = document.getElementById('founder-name')?.value || 'Анонім';
-    const email = document.getElementById('email')?.value || 'не вказано';
     const sector = document.getElementById('sector').value;
     const presentationInput = document.getElementById('presentation');
 
@@ -55,7 +53,7 @@
         const presentation = reader.result;
 
         // Створюємо об'єкт інвестора
-        const newInvestor = { investorName, email, sector, presentation };
+        const newInvestor = { sector, presentation };
 
         // Отримуємо існуючий масив інвесторів з localStorage або створюємо новий
         const investors = JSON.parse(localStorage.getItem('investors')) || [];
@@ -64,8 +62,8 @@
         // Зберігаємо оновлений масив інвесторів у localStorage
         localStorage.setItem('investors', JSON.stringify(investors));
 
-        // Повідомлення про успішну реєстрацію та перенаправлення на головну сторінку
-        localStorage.setItem('registrationSuccess', 'Інвестор успішно зареєстрований!');
+        // Перенаправлення на головну сторінку після успішної реєстрації
+        alert('Інвестор успішно зареєстрований!');
         window.location.href = "../main/index.html";
       };
 
