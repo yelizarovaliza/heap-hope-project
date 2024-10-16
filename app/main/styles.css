@@ -1,13 +1,15 @@
 
 .intro {
+    max-width: 1002px;
     padding: 30px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 .intro h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 70px;
+    margin: 20px;
     animation: fadeIn 2s ease-out forwards;
 }
 .notification {
@@ -31,14 +33,12 @@
     }
 }
 
-.intro h2 {
-    font-size: 1.2em;
-    color: #aaa;
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-out forwards; /* Анімація з ефектом появи */
+.intro h1 span {
+    color: #a55eea;
 }
 
 .intro p {
+    font-family: "Nunito Sans", sans-serif;
     font-size: 1em;
     color: #ccc;
     max-width: 600px;
@@ -46,25 +46,16 @@
     line-height: 1.6;
     animation: fadeIn 2s ease-out forwards;
 }
-.intro-image {
-    width: 100px; /* Початкова ширина */
-    max-width: 600px; /* Максимальна ширина */
-    transition: width 0.5s ease, transform 0.5s ease, opacity 0.5s ease; /* Анімації для ширини, трансформації і непрозорості */
-    display: block; /* Додано для коректного відображення */
-    margin: 0 auto; /* Центрування зображення */
-    border-radius: 20px; /* Закруглення країв */
-    opacity: 0; /* Спочатку непрозоре */
-    transform: translateY(100px); /* Спочатку зміщене вниз */
-}
+
 
 .intro_button {
     display: inline-block;
     margin-top: 20px;
     padding: 15px 30px;
-    font-size: 1.5em;
+    font-size: 20px;
     font-weight: bold;
     color: #000;
-    background-color: #fff;
+    background-color: #9223e3;
     border: none;
     border-radius: 10px;
     text-decoration: none;
@@ -73,6 +64,5 @@
 }
 
 .intro_button:hover {
-    background-color: #f05; /* червоний колір при наведенні */
-    color: #fff; /* змінюємо колір тексту на білий при наведенні */
+    background-color: #ffffff; /* червоний колір при наведенні */
 }
