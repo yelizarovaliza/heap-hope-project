@@ -1,42 +1,54 @@
 // DOM
-const swiper = document.querySelector("#swiper");
-const like = document.querySelector("#like");
-const dislike = document.querySelector("#dislike");
+const swiper = document.querySelector('#swiper');
+const like = document.querySelector('#like');
+const dislike = document.querySelector('#dislike');
 
-const startups = JSON.parse(localStorage.getItem("startups")) || [];
 
-// variables
-let cardCount = 0;
+const startups = JSON.parse(localStorage.getItem('startups')) || [];
 
-// functions
+
+let cardCount = 0;  // Лічильник карток
+let zIndexCounter = startups.length; 
+
 function appendNewCard() {
-  if (cardCount >= startups.length) return;
+  if (cardCount >= startups.length) {
+    console.log("No more cards to display");
+    return;
+  }
 
-  const startup = startups[cardCount];
+  const startup = startups[cardCount]; 
+
   const card = new Card({
     imageUrl: startup.presentation,
-    onDismiss: appendNewCard,
+    startupName: startup.startupName,
+    sector: startup.sector,
+    budget: startup.budget,
+    description: startup.description,
+    onDismiss: () => {
+      appendNewCard(); 
+    },
     onLike: () => {
-      like.style.animationPlayState = "running";
-      like.classList.toggle("trigger");
+      like.style.animationPlayState = 'running';
+      like.classList.toggle('trigger');
     },
     onDislike: () => {
-      dislike.style.animationPlayState = "running";
-      dislike.classList.toggle("trigger");
+      dislike.style.animationPlayState = 'running';
+      dislike.classList.toggle('trigger');
     },
   });
 
-  swiper.append(card.element);
-  cardCount++;
+  card.element.style.zIndex = zIndexCounter--; 
+  swiper.prepend(card.element); 
+  cardCount++; 
 
-  // Оновлюємо індексацію карток для плавної анімації
+ 
   const cards = swiper.querySelectorAll(".card:not(.dismissing)");
   cards.forEach((card, index) => {
-    card.style.setProperty("--i", index);
+    card.style.setProperty("--i", index); 
   });
 }
 
-// first 5 cards
-for (let i = 0; i < 5; i++) {
+
+for (let i = 0; i < Math.min(5, startups.length); i++) {
   appendNewCard();
 }
