@@ -1,55 +1,78 @@
-body {
-    font-family: 'Arial Black', Arial, sans-serif; /* Шрифт, як у головній */
-    background-color: #A15FFF; /* Колір фону */
-    color: #ffffff; /* Колір тексту */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Висота на всю сторінку */
-    margin: 0; /* Вимкнення стандартних відступів */
-}
 
-h2 {
-    font-size: 40px; /* Розмір заголовка */
-    margin-bottom: 20px; /* Відступ нижче заголовка */
-}
 
 form {
-    background-color: #000; /* Колір фону форми */
-    border-radius: 15px; /* Закруглені кути */
-    padding: 20px; /* Внутрішні відступи */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Тінь для форм */
-    width: 300px; /* Ширина форми */
+    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Тло форми чорне */
+    padding: 20px;
+    border-radius: 10px;
+}
+form p{
+    margin-top: 40px;
 }
 
-label {
-    margin-top: 10px; /* Відступ для ярликів */
-    display: block; /* Ярлики займають весь рядок */
-    font-size: 16px; /* Розмір тексту ярликів */
-}
-
-input, select {
-    width: 100%; /* Ширина елементів введення */
-    padding: 10px; /* Внутрішні відступи */
-    margin-top: 5px; /* Відступ між ярликом та полем вводу */
-    margin-bottom: 15px; /* Відступ між полями */
-    border: none; /* Без рамки */
-    border-radius: 5px; /* Закруглені кути */
-    background-color: #222; /* Колір фону полів вводу */
-    color: #fff; /* Колір тексту */
+input[type="email"], input[type="password"] {
+    background: none;
+    border: 2px solid #720DFF;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 35px; /* Зміна на закруглені поля */
+    color: #fff;
+    width: 100%;
+    max-width: 300px; /* Максимальна ширина полів */
 }
 
 button {
-    background-color: #ffffff; /* Колір кнопки */
-    color: #000000; /* Колір тексту кнопки */
-    border: none; /* Без рамки */
-    padding: 10px; /* Внутрішні відступи кнопки */
-    border-radius: 5px; /* Закруглені кути */
-    cursor: pointer; /* Курсор у вигляді вказівника при наведенні */
-    width: 100%; /* Ширина кнопки */
-    font-size: 16px; /* Розмір тексту кнопки */
+    background-color: #720DFF;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px; /* Максимальна ширина кнопки */
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #a55eea; /* Колір кнопки при наведенні */
+    background-color: #720DFF;
 }
+
+h1 {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #720DFF;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+a {
+    color: #720DFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

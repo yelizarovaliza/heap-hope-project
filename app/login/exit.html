@@ -5,57 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../login/exit.css">
     <link rel="stylesheet" href="../main/additional.css">
+    <link rel="stylesheet" href="../login/photo.css">
     <title>Login</title>
 </head>
-<header>
-    <nav>
-        <div class="social-icons">
-            <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="../images/linkedin.png" alt="LinkedIn"></a>
-        </div>
-        <div class="menu">
-            <a href="../login/exit.html" class="button">Вхід</a>
-            <a href="#" class="button">Кабінет</a>
-            <a href="#" class="button">Contacts</a>
-            <div class="language-selector">
-                <a href="#" class="language-option">EN</a> |
-                <a href="#" class="language-option">UA</a>
-            </div>
-        </div>
-    </nav>
-</header>
+
 <body>
-<h2>Login</h2>
-<form id="loginForm">
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+<div class="container">
+    <div class="left-panel">
+        <div class="phone-frame">
+            <img src="../images/phone_mockup.png" alt="Main Image" class="main-image">
+            <img src="../images/virtual_reality.png" alt="Overlay Image" class="overlay-image">
+            <h1>Обирай. <br> Інвестуй.</h1>
+        </div>
+    </div>
+    <div class="right-panel">
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+        <form>
+            <h2>Вхід</h2>
+            <input type="email" placeholder="Ваш email" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit">Увійти</button>
+            <p>Ще не маєте акаунту? <a href="#">Зареєструватись</a></p>
 
-    <label for="role">Role:</label>
-    <select id="role" name="role" required>
-        <option value="investor">Investor</option>
-        <option value="startup">Startup</option>
-    </select>
-
-    <button type="submit">Login</button>
-</form>
-
-<script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const email = document.getElementById('email').value;
-        const role = document.getElementById('role').value;
-
-        // Redirect based on role
-        if (role === 'investor') {
-            window.location.href = `../Profile/investorProfile.html?email=${encodeURIComponent(email)}`;
-        } else if (role === 'startup') {
-            window.location.href = `../Profile/startupProfile.html?email=${encodeURIComponent(email)}`;
-        }
-    });
-</script>
+        </form>
+    </div>
+</div>
 </body>
 </html>
