@@ -7,35 +7,34 @@
   <title>Startup Registration</title>
   <link rel="stylesheet" href="register_css.css">
   <link rel="stylesheet" href="../main/additional.css">
-</head>
+  <link rel="stylesheet" href="../login/photo.css"></head>
+  <link rel="stylesheet" href="registration4.css">
+
 
 <body>
-<header>
-  <nav>
-    <div class="social-icons">
-      <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
-      <a href="#"><img src="../images/linkedin.png" alt="LinkedIn"></a>
-    </div>
-    <div class="menu">
-      <a href="../login/exit.html" class="button">Вхід</a>
-      <a href="../main/index.html" class="button">Головна</a>
-    </div>
-  </nav>
-</header>
-
 <main>
-  <section class="register">
-    <h2>Реєстрація для Інвестора</h2>
-    <form id="register-form" action="#" method="post">
-      <label for="startup-email">email:</label>
-      <input type="text" id="startup-email" name="email" required>
+  <div class="container">
+    <div class="left-panel">
+      <div class="phone-frame">
+        <img src="../images/phone_mockup.png" alt="Main Image" class="main-image">
+        <img src="../images/virtual_reality.png" alt="Overlay Image" class="overlay-image">
+        <h1>Обирай. <br> Інвестуй.</h1>
+      </div>
+    </div>
+    <div class="right-panel">
 
-      <label for="password">password:</label>
-      <input type="text" id="password" name="password" required>
+      <form id="register-form" action="#" method="post">
+        <h2>Реєстрація</h2>
+        <input type="text" id="name" name="name" placeholder="Ім'я" required>
+        <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
+        <input type="email" id="startup-email" name="email" placeholder="Ваш email" required>
+        <input type="password" id="password" name="password" placeholder="Пароль" required>
 
-      <button type="submit" class="button">Створити</button>
-    </form>
-  </section>
+        <button type="submit" class="button">Створити</button>
+      </form>
+    </div>
+  </div>
+
 
   <script>
     document.getElementById('register-form').addEventListener('submit', function (event) {
@@ -46,35 +45,26 @@
 
 </main>
 <script>
-  document.querySelector('form').addEventListener('submit', function (event) {
+  document.getElementById('register-form').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const startupName = document.getElementById('startup-name').value;
-    const founderName = document.getElementById('founder-name').value;
+    // Збираємо дані з форми
+    const name = document.getElementById('name').value;
+    const surname = document.getElementById('surname').value;
     const email = document.getElementById('email').value;
-    const description = document.getElementById('description').value;
-    const sector = document.getElementById('sector').value;
-    const presentationInput = document.getElementById('presentation');
+    const password = document.getElementById('password').value;
 
-    const reader = new FileReader();
-    reader.onload = function () {
-      const presentation = reader.result;
+    // Створюємо об'єкт інвестора
+    const newInvestor = { name, surname, email, password };
 
-      const newStartup = { startupName, founderName, email, description, sector, presentation };
+    // Зберігаємо дані в localStorage
+    const investors = JSON.parse(localStorage.getItem('investors')) || [];
+    investors.push(newInvestor);
+    localStorage.setItem('investors', JSON.stringify(investors));
 
-      const startups = JSON.parse(localStorage.getItem('startups')) || [];
-      startups.push(newStartup);
-      localStorage.setItem('startups', JSON.stringify(startups));
 
-      localStorage.setItem('registrationSuccess', 'Стартап успішно зареєстрований!');
-      window.location.href = "../main/index.html";
-    };
-
-    if (presentationInput.files.length > 0) {
-      reader.readAsDataURL(presentationInput.files[0]);
-    } else {
-      alert("Будь ласка, завантажте зображення.");
-    }
+    // Перенаправлення на сторінку реєстрації або головну
+    window.location.href = "registrationInvestor2.html"; // Змінити на потрібну сторінку
   });
 </script>
 

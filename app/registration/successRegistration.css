@@ -1,0 +1,29 @@
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Вирівнювання по центру горизонтально (за бажанням) */
+}
+
+h2{
+    max-width: 864px;
+    font-size: 60px;
+    margin-right: 20px;
+}
+button {
+    background-color: #fff; /* Білий фон для кнопки */
+    color: black;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 150px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
+
+button:hover {
+    background-color: #720DFF; /* Зміна кольору при наведенні */
+}
+
