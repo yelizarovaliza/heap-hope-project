@@ -16,7 +16,7 @@ header {
 }
 
 main {
-    margin-top: 900px; /* Відступ для розташування під статичним header */
+    margin-top: 900px;
     padding-bottom: 100px;
     display: flex;
     align-items: center;
@@ -40,9 +40,9 @@ main {
 }
 
 .notification {
-    display: none; /* Початково приховане */
+    display: none; 
     padding: 15px;
-    background-color: #4CAF50; /* Зелений фон */
+    background-color: #4CAF50; 
     color: white;
     text-align: center;
     margin-top: 10px;
@@ -52,7 +52,7 @@ main {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Невеликий зсув вниз для більшого ефекту */
+        transform: translateY(20px); 
     }
     to {
         opacity: 1;
@@ -90,7 +90,7 @@ main {
 }
 
 .intro_button:hover {
-    background-color: #ffffff; /* колір при наведенні */
+    background-color: #ffffff;
 }
 .platform-info {
     display: flex;
@@ -112,10 +112,10 @@ main {
 .platform-info .info-text p{
     font-family: 'Avenir Next';
     font-weight: normal;
-    font-size: 20px; /* Задайте розмір шрифту за необхідності */
+    font-size: 20px; 
     text-align: center;
     margin: 0;
-    margin-bottom: 10px; /* Відступ між підзаголовком і основним заголовком */
+    margin-bottom: 10px;
     color: #ffffff;
 }
 
@@ -134,8 +134,10 @@ main {
     font-size: 20px;
     margin-top: 20px;
     line-height: 1.6;
-    text-align: left; /* Вирівнювання по лівій стороні */
+    text-align: left; 
 }
+
+
 .platform-info .info-image {
     display: flex;
     justify-content: center;
@@ -143,30 +145,4 @@ main {
     position: relative;
     max-width: 50%;
 }
-
-/* Основна картинка (на задньому плані) */
-/* Основний фрейм */
-.phone-frame {
-    margin-right: 150px;
-    position: relative;
-    background-color: #000;
-    width: 434px;
-    height: 844px;
-    border-radius: 25px;
-    z-index: 1;
-    display: grid;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-/* Перекриваюча картинка */
-.overlay-image {
-    position: absolute;
-    top: 110px; /* Піднімає накладену картинку вище */
-    right: -200px; /* Встановлюємо відступ справа на 20px */
-    transform: rotate(5deg);
-    width: 110%; /* Зменшено для відповідного масштабу */
-    z-index: 2; /* Має бути більше за z-index основного фрейму */
-}
-
 
