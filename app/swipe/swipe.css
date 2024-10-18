@@ -15,19 +15,124 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-family: Arial, sans-serif;
 }
 
-.header {
+#swiper {
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  border-radius: 15px;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-info {
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-info h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.card-info-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 20px;
+  align-items: center; 
+  margin-bottom: 10px;
+}
+
+.card-info p {
+  font-size: 0.9em;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.card-info .sector {
+  font-size: 1.1em; 
+  font-style: italic;
+  color: #a66cff; 
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.card-info .budget {
+  font-size: 18px;
   color: white;
+}
+
+.view-button {
+  background-color: #720DFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  position: relative;
+}
+
+.view-button:hover {
+  background-color: #9d43ff;
+}
+
+#like, #dislike {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  position: absolute;
+  bottom: 38%;
+}
+
+#like {
+  right: 20%;
+}
+
+#dislike {
+  left: 20%;
+}
+
+#like:hover, #dislike:hover {
+  transform: scale(1.2);
 }
 
 .cabinet-button {
@@ -61,110 +166,40 @@ body {
   top: 60px;
 }
 
-#swiper {
-  height: 70vh;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;
-  justify-content: flex-start;
+.naming:hover{
+  color: #9d43ff;
 }
 
-.card {
-  width: 400px;
-  height: 600px;
-  border-radius: 15px;
-  background-color: #000;
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Центруємо картки */
-  transition: all 0.3s ease;
-  border: 1px solid white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  z-index: 1;
-}
 
-.card img {
-  width: 100%;
-  height: 50%; /* Зображення займає половину картки */
-  object-fit: cover;
-  border-radius: 8px;
-}
 
 .card-info {
   text-align: left;
   padding: 10px;
-  flex-grow: 1;
 }
 
+
+
 .card-info h2 {
-  font-size: 1.2em;
+  font-family: "Ariall blabk ";
+  font-size: 40px;
   font-weight: bold;
   margin: 0;
   color: #fff;
 }
 
-.card-info p {
-  font-size: 0.9em;
-  color: #ccc;
-  margin: 5px 0;
+
+
+.card-info .name-budget-container {
+  display: flex;
+  font-size: 40px;
+  color: #fff;
+  gap: 130px; 
+  /* bottom: 40%; */
 }
 
-.view-button {
-  background-color: #720DFF;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: background-color 0.3s ease;
-  width: 100%;
+.card-info .budget {
+  font-family: "Avenir Next";
+  color: #fff;
   position: relative;
-  z-index: 10;
+  top: 10px; 
 }
-
-.view-button:hover {
-  background-color: #9d43ff;
-}
-
-#like, #dislike {
-  background-color: transparent;
-  border: none;
-  display: inline-block;
-  width: 150px;
-  height: 160px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-  position: absolute;
-  bottom: 38%;
-}
-
-#like {
-  right: 20%;
-}
-
-#dislike {
-  left: 20%;
-}
-
-#like:hover, #dislike:hover {
-  transform: scale(1.2);
-}
-
-.dismissing {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 1s ease;
-}
-
-

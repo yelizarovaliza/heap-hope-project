@@ -15,10 +15,11 @@
         <button class="cabinet-button">Кабінет</button>
     </header>
 
-    <!-- Replace ion-icons with your images -->
-    <img id="dislike" src="./Bitmap2.png" alt="Dislike" width="50" height="50">
-    <div id="swiper"></div>
-    <img id="like" src="./Bitmap.png" alt="Like" width="50" height="50">
+    <div class="main-content">
+        <img id="dislike" src="./Bitmap2.png" alt="Dislike" width="50" height="50">
+        <div id="swiper"></div>
+        <img id="like" src="./Bitmap.png" alt="Like" width="50" height="50">
+    </div>
 
     <script src="../swipe/cards.js"></script>
     <script src="../swipe/swipe.js"></script>
@@ -35,13 +36,19 @@
                 card.className = 'card';
                 card.innerHTML = `
                     <div class="card-content">
+
                         <div class="card-image">
                             <img src="${startup.presentation}" alt="Presentation of ${startup.startupName}" onerror="this.src='default-image-url.jpg';">
                         </div>
                         <div class="card-info">
+                            <div class="name-budget-container">
                             <h2 class="startup-name">${startup.startupName}</h2>
-                            <p class="sector">${startup.sector}</p>
                             <p class="budget"> ${startup.budget} грн</p>
+                            </div>
+
+                            
+                            <p class="sector">${startup.sector}</p>
+                            
                             <p class="description"> ${startup.description}</p>
                         </div>
                         <button class="view-button">Переглянути</button>
