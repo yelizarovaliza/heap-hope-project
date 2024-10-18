@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UmpaUmpa</title>
-    <link rel="stylesheet" href="additional.css"> 
+    <link rel="stylesheet" href="additional.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-<header>
-    <nav>
-        <div class="social-icons">
-            <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="../images/linkedin.png" alt="LinkedIn"></a>
-        </div>
-        <div class="menu">
-            <a href="../login/exit.html" class="button">Вхід</a>
-            <a href="#" class="button">Кабінет</a>
-            <a href="#" class="button">Contacts</a>
-            <div class="language-selector">
-                <a href="#" class="language-option">EN</a> |
-                <a href="#" class="language-option">UA</a>
+    <header>
+        <nav>
+            <div class="social-icons">
+                <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="../images/linkedin.png" alt="LinkedIn"></a>
             </div>
-        </div>
-    </nav>
-</header>
-
-<main>
-    <div id="notification" class="notification"></div>
-    <section class="intro">
-        <p>HeapHope. Твій сервіс пошуку стартапів</p>
-        <h1>ІНВЕСТУЙ У МАЙБУТНЄ.<br>ОБИРАЙ <span>УКРАЇНСЬКІ</span> СТАРТАПИ</h1>
-        <a href="../swipe/seeMore.html" class="intro_button">ГАЙДА ОБИРАТИ</a>
-    </section>
-    <section class="platform-info">
-        <div class="info-text">
-            <p>Про сервіс</p>
-            <h2>ПЛАТФОРМА-ПІДТРИМКА<br>СТАРТАПІВ НА ПОТРЕБИ ЗСУ</h2>
-            <h1 class="description">Наша цінність це можливість отримувати постійну фінансову підтримку на сайті + інвестори конкретно знають куди інвестують</h1>
-        </div>
-        <div class="info-image">
-            <div class="phone-frame">
-                <img src="../images/phone_mockup.png" alt="Mockup of the platform on a phone">
-                <img src="../images/virtual_reality.png" alt="Virtual Reality Experience" class="overlay-image">
+            <div class="menu">
+                <a href="../login/exit.html" class="button">Вхід</a>
+                <a href="#" class="button">Кабінет</a>
+                <a href="#" class="button">Contacts</a>
+                <div class="language-selector">
+                    <a href="#" class="language-option">EN</a> |
+                    <a href="#" class="language-option">UA</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
+
+    <main>
+        <div id="notification" class="notification"></div>
+        <section class="intro">
+            <p>HeapHope. Твій сервіс пошуку стартапів</p>
+            <h1>ІНВЕСТУЙ У МАЙБУТНЄ.<br>ОБИРАЙ <span>УКРАЇНСЬКІ</span> СТАРТАПИ</h1>
+            <a href="../swipe/seeMore.html" class="intro_button">ГАЙДА ОБИРАТИ</a>
+        </section>
+        <section class="platform-info">
+            <div class="info-text">
+                <p>Про сервіс</p>
+                <h2>ПЛАТФОРМА-ПІДТРИМКА<br>СТАРТАПІВ НА ПОТРЕБИ ЗСУ</h2>
+                <h1 class="description">Наша цінність це можливість отримувати постійну фінансову підтримку на сайті +
+                    інвестори конкретно знають куди інвестують</h1>
+            </div>
+            <div class="info-image">
+                <div class="phone-frame">
+                    <img src="../images/phone_mockup.png" alt="Mockup of the platform on a phone">
+                    <img src="../images/virtual_reality.png" alt="Virtual Reality Experience" class="overlay-image">
+                </div>
+            </div>
+        </section>
 
 
-</main>
-<script src="index1.js"></script>
-<script>
-    const notificationDiv = document.getElementById('notification');
-    const successMessage = localStorage.getItem('registrationSuccess');
+    </main>
+    <script src="index1.js"></script>
+    <script>
+        const notificationDiv = document.getElementById('notification');
+        const successMessage = localStorage.getItem('registrationSuccess');
 
-    if (successMessage) {
-        notificationDiv.textContent = successMessage;
-        notificationDiv.style.display = 'block';
+        if (successMessage) {
+            notificationDiv.textContent = successMessage;
+            notificationDiv.style.display = 'block';
 
-        localStorage.removeItem('registrationSuccess');
-    }
-</script>
+            localStorage.removeItem('registrationSuccess');
+        }
+    </script>
 </body>
+
 </html>

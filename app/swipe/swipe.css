@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -71,7 +72,7 @@ body {
 .card-info-header {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -82,9 +83,9 @@ body {
 }
 
 .card-info .sector {
-  font-size: 1.1em; 
+  font-size: 1.1em;
   font-style: italic;
-  color: #a66cff; 
+  color: #a66cff;
   font-weight: normal;
   margin-bottom: 10px;
 }
@@ -95,7 +96,7 @@ body {
 }
 
 .view-button {
-  background-color: #720DFF;
+  background-color: #720dff;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -111,7 +112,8 @@ body {
   background-color: #9d43ff;
 }
 
-#like, #dislike {
+#like,
+#dislike {
   background-color: transparent;
   border: none;
   display: inline-block;
@@ -131,12 +133,13 @@ body {
   left: 20%;
 }
 
-#like:hover, #dislike:hover {
+#like:hover,
+#dislike:hover {
   transform: scale(1.2);
 }
 
 .cabinet-button {
-  background-color: #720DFF;
+  background-color: #720dff;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -166,18 +169,14 @@ body {
   top: 60px;
 }
 
-.naming:hover{
+.naming:hover {
   color: #9d43ff;
 }
-
-
 
 .card-info {
   text-align: left;
   padding: 10px;
 }
-
-
 
 .card-info h2 {
   font-family: "Ariall blabk ";
@@ -187,13 +186,11 @@ body {
   color: #fff;
 }
 
-
-
 .card-info .name-budget-container {
   display: flex;
   font-size: 40px;
   color: #fff;
-  gap: 130px; 
+  gap: 130px;
   /* bottom: 40%; */
 }
 
@@ -201,5 +198,5 @@ body {
   font-family: "Avenir Next";
   color: #fff;
   position: relative;
-  top: 10px; 
+  top: 10px;
 }
