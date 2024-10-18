@@ -1,54 +1,78 @@
 
-/* Style for Login Page */
-.login-section {
+
+form {
+    margin-right: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
+    background-color: #000; /* Тло форми чорне */
     padding: 20px;
+    border-radius: 10px;
+}
+form p{
+    margin-top: 40px;
 }
 
-.login-section h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #f05;
-}
-
-.login-options {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-.login-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin: 5px;
-}
-
-.login-button:hover {
-    background-color: #f05;
+input[type="email"], input[type="password"] {
+    background: none;
+    border: 2px solid #720DFF;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 35px; /* Зміна на закруглені поля */
     color: #fff;
+    width: 100%;
+    max-width: 300px; /* Максимальна ширина полів */
 }
 
-.signup-link {
-    color: #f05;
+button {
+    background-color: #720DFF;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px; /* Максимальна ширина кнопки */
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #720DFF;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #720DFF;
     text-decoration: none;
-    font-weight: bold;
+    margin-top: 10px;
 }
 
-.signup-link:hover {
+a:hover {
     text-decoration: underline;
 }
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+a {
+    color: #720DFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

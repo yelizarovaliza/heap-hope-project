@@ -8,7 +8,13 @@
   <link rel="stylesheet" href="register_css.css">
   <link rel="stylesheet" href="../main/additional.css">
   <link rel="stylesheet" href="../login/photo.css"></head>
-<link rel="stylesheet" href="registration4.css">
+ <link rel="stylesheet" href="registration4.css">
+<style>
+  h1{
+    font-size: 20px;
+  }
+</style>
+
 
 
 <body>
@@ -25,10 +31,10 @@
 
       <form id="register-form" action="#" method="post">
         <h2>Реєстрація</h2>
-        <input type="text" id="name" name="name" placeholder="Ім'я" required>
-        <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
-        <input type="email" id="startup-email" name="email" placeholder="Ваш email" required>
-        <input type="password" id="password" name="password" placeholder="Пароль" required>
+        <h1>Інформація про стартап</h1>
+        <input type="text" id="nameStartup" name="nameStartup" placeholder="Назва стартапу" required>
+        <input type="text" id="area" name="area" placeholder="Напрямок" required>
+        <input type="text" id="amount" name="amount" placeholder="Сума необхідних коштів" required>
 
         <button type="submit" class="button">Створити</button>
       </form>
@@ -39,14 +45,11 @@
   <script>
     document.getElementById('register-form').addEventListener('submit', function (event) {
       event.preventDefault();
-      window.location.href = 'registerStartup2.html';
+      window.location.href = 'registerStartup4.html';
     });
   </script>
 
 </main>
-
-
-
 </body>
 
 </html>

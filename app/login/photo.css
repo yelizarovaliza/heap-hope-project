@@ -1,0 +1,66 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    width:864px;
+    background-color: #720DFF; /* Purple color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-panel {
+    width: 864px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000; /* Black or dark color */
+}
+
+.left-panel h1 {
+    font-size: 4em;
+    margin: 0;
+}
+.phone-frame {
+    position: relative;
+    width: 300px; /* Ширина контейнера, налаштуйте за потреби */
+    height: auto; /* Автоматична висота залежно від зображень */
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    z-index: 1;
+    position: relative;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 60px; /* Adjust vertical position */
+    right: -180px; /* Adjust horizontal position */
+    transform: rotate(-10deg); /* Adjust rotation as needed */
+    width: 125%; /* Adjust overlay size */
+    z-index: 2;
+}
+.left-panel h1 {
+    max-width: 831px;
+    font-size: 80px ;
+    position: absolute;
+    top: 20%; /* Adjust the value to position the text as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* Text is above the image */
+    color: #fff;
+    text-align: left;
+    pointer-events: none; /* Ensure the text does not interfere with clicking */
+}

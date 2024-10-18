@@ -4,26 +4,33 @@
     box-sizing: border-box;
 }
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
     background-color: #000;
     color: #fff;
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
 }
 
 header {
+    background-color: #000;
+    position: absolute;
+    top: 20px;
     width: 100%;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 50px;
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px; /* Відступи по 100px з кожного боку */
+    padding: 20px 100px; /* Відступи по 100px з кожного боку */
     width: 100%;
     box-sizing: border-box;
 }
@@ -47,7 +54,7 @@ nav {
 }
 
 .language-option:hover {
-    color: #f05; /* Changes color on hover */
+    color: #ffffff; /* Changes color on hover */
     text-decoration: underline;
 }
 .menu {
@@ -56,16 +63,17 @@ nav {
 }
 
 .menu .button {
+    font-family: "Nunito Sans", sans-serif;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 35px;
     background-color: #fff;
     color: #000;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: normal;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .menu .button:hover {
-    background-color: #f05;
+    background-color: #A15FFF;
     color: #fff;
 }
 

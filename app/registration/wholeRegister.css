@@ -1,0 +1,91 @@
+form {
+    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Тло форми чорне */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form p {
+    margin-top: 40px;
+}
+
+/* Стиль для кнопки "Оберіть вашу роль" */
+.your-role {
+    color: white;
+    padding: 15px;
+    border: 2px solid #720DFF; /* Фіолетова рамка */
+    border-radius: 20px;
+    cursor: pointer;
+    width: 427px; /* Встановлена ширина для кнопки */
+    margin-top: 10px;
+
+}
+.next{
+    background: white;
+    color: black;
+    font-weight: bold;
+    padding: 15px;
+    border: 2px solid white; /* Фіолетова рамка */
+    border-radius: 20px;
+    cursor: pointer;
+    width: 180px; /* Встановлена ширина для кнопки */
+    margin-top: 10px;
+}
+
+.next:hover{
+    background-color: #720DFF;
+    border: 2px solid #720DFF;
+}
+button:hover {
+    background-color: #720DFF;
+}
+
+h2 {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 427px;
+}
+
+a {
+    color: #720DFF;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Контейнер для кнопок вибору ролі */
+.role {
+    display: flex;
+    gap: 20px; /* Простір між кнопками */
+    margin: 20px 0;
+}
+
+/* Стилі для кнопок Інвестор та Стартапер */
+.role-button {
+    background-color: transparent; /* Прозорий фон */
+    border: 2px solid #720DFF; /* Фіолетова рамка */
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff; /* Білий текст */
+    cursor: pointer;
+    max-width: 159px;
+}
+
+.role-button.active {
+    background-color: #720DFF; /* Зміна фону на фіолетовий */
+    color: #fff; /* Текст білий */
+    border-color: #720DFF; /* Рамка фіолетова */
+}

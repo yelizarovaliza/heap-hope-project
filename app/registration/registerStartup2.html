@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реєстрація</title>
+  <link rel="stylesheet" href="register_css.css">
+  <link rel="stylesheet" href="../main/additional.css">
+  <link rel="stylesheet" href="../login/photo.css">
+  <link rel="stylesheet" href="registration4.css">
+  <link rel="stylesheet" href="registration2.css">
+</head>
+
+<body>
+<main>
+  <div class="container">
+    <div class="left-panel">
+      <div class="phone-frame">
+        <img src="../images/phone_mockup.png" alt="Main Image" class="main-image">
+        <img src="../images/virtual_reality.png" alt="Overlay Image" class="overlay-image">
+        <h1>Обирай. <br> Інвестуй.</h1>
+      </div>
+    </div>
+    <div class="right-panel">
+      <form id="registrationForm" action="#" method="post">
+        <h2>Реєстрація</h2>
+        <h3>Оберіть банк для верифікації особи</h3>
+        <div class="bank">
+          <div class="bank-option" data-bank="privatbank">
+            <img src="../images/privatbank_logo.png" alt="PrivatBank Logo" class="bank-logo">
+            <span>ПриватБанк</span>
+          </div>
+          <div class="bank-option" data-bank="ukrgasbank">
+            <img src="../images/ukrgasbank_logo.png" alt="Ukrgasbank Logo" class="bank-logo">
+            <span>УКРГАЗБАНК</span>
+          </div>
+          <div class="bank-option" data-bank="universal">
+            <img src="../images/universal_logo.png" alt="Universal Bank Logo" class="bank-logo">
+            <span>УНІВЕРСАЛ БАНК</span>
+          </div>
+        </div>
+
+
+        <button type="submit" class="submit-button">Далі</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Select all bank options
+    const bankOptions = document.querySelectorAll('.bank-option');
+    let selectedBank = null;
+
+    // Loop through each bank option
+    bankOptions.forEach(option => {
+      option.addEventListener('click', function() {
+        // Remove the "active" class from all bank options
+        bankOptions.forEach(btn => btn.classList.remove('active'));
+
+        // Add the "active" class to the clicked bank option
+        this.classList.add('active');
+
+        // Store the selected bank's data attribute
+        selectedBank = this.getAttribute('data-bank');
+
+        // Optional: Log the selected bank to the console for debugging
+        console.log("Selected Bank:", selectedBank);
+      });
+    });
+
+    // Add event listener for the form submission
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Check if a bank was selected
+      if (selectedBank) {
+        // Navigate to the main page or process form submission
+        window.location.href = 'registerStartup3.html';
+      } else {
+        // Alert if no bank was selected
+        alert('Будь ласка, оберіть банк для верифікації.');
+      }
+    });
+  </script>
+
+
+</main>
+
+</body>
+</html>

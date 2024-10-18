@@ -3,41 +3,52 @@ const swiper = document.querySelector('#swiper');
 const like = document.querySelector('#like');
 const dislike = document.querySelector('#dislike');
 
+
 const startups = JSON.parse(localStorage.getItem('startups')) || [];
 
 
-// variables
-let cardCount = 0;
+let cardCount = 0;  // Лічильник карток
+let zIndexCounter = startups.length; 
 
-// functions
 function appendNewCard() {
-    if (cardCount >= startups.length) return;
+  if (cardCount >= startups.length) {
+    console.log("No more cards to display");
+    return;
+  }
 
-    const startup = startups[cardCount];
-    const card = new Card({
-        imageUrl: startup.presentation,
-        onDismiss: appendNewCard,
-        onLike: () => {
-            like.style.animationPlayState = 'running';
-            like.classList.toggle('trigger');
-        },
-        onDislike: () => {
-            dislike.style.animationPlayState = 'running';
-            dislike.classList.toggle('trigger');
-        }
-    });
+  const startup = startups[cardCount]; 
 
-    swiper.append(card.element);
-    cardCount++;
+  const card = new Card({
+    imageUrl: startup.presentation,
+    startupName: startup.startupName,
+    sector: startup.sector,
+    budget: startup.budget,
+    description: startup.description,
+    onDismiss: () => {
+      appendNewCard(); 
+    },
+    onLike: () => {
+      like.style.animationPlayState = 'running';
+      like.classList.toggle('trigger');
+    },
+    onDislike: () => {
+      dislike.style.animationPlayState = 'running';
+      dislike.classList.toggle('trigger');
+    },
+  });
 
-    // Оновлюємо індексацію карток для плавної анімації
-    const cards = swiper.querySelectorAll('.card:not(.dismissing)');
-    cards.forEach((card, index) => {
-        card.style.setProperty('--i', index);
-    });
+  card.element.style.zIndex = zIndexCounter--; 
+  swiper.prepend(card.element); 
+  cardCount++; 
+
+ 
+  const cards = swiper.querySelectorAll(".card:not(.dismissing)");
+  cards.forEach((card, index) => {
+    card.style.setProperty("--i", index); 
+  });
 }
 
-// first 5 cards
-for (let i = 0; i < 5; i++) {
-    appendNewCard();
+
+for (let i = 0; i < Math.min(5, startups.length); i++) {
+  appendNewCard();
 }

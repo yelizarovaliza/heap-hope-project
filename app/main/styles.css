@@ -1,15 +1,44 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial Black', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 900px; /* Відступ для розташування під статичним header */
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 .intro {
+    margin-top: 300px;
+    max-width: 1002px;
     padding: 30px;
     text-align: center;
-    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .intro h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 50px;
+    margin: 20px;
     animation: fadeIn 2s ease-out forwards;
 }
+
 .notification {
     display: none; /* Початково приховане */
     padding: 15px;
@@ -31,14 +60,12 @@
     }
 }
 
-.intro h2 {
-    font-size: 1.2em;
-    color: #aaa;
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-out forwards; /* Анімація з ефектом появи */
+.intro h1 span {
+    color: #a55eea;
 }
 
 .intro p {
+    font-family: 'Avenir Next';
     font-size: 1em;
     color: #ccc;
     max-width: 600px;
@@ -46,33 +73,100 @@
     line-height: 1.6;
     animation: fadeIn 2s ease-out forwards;
 }
-.intro-image {
-    width: 100px; /* Початкова ширина */
-    max-width: 600px; /* Максимальна ширина */
-    transition: width 0.5s ease, transform 0.5s ease, opacity 0.5s ease; /* Анімації для ширини, трансформації і непрозорості */
-    display: block; /* Додано для коректного відображення */
-    margin: 0 auto; /* Центрування зображення */
-    border-radius: 20px; /* Закруглення країв */
-    opacity: 0; /* Спочатку непрозоре */
-    transform: translateY(100px); /* Спочатку зміщене вниз */
-}
 
 .intro_button {
     display: inline-block;
     margin-top: 20px;
     padding: 15px 30px;
-    font-size: 1.5em;
+    font-size: 20px;
     font-weight: bold;
     color: #000;
-    background-color: #fff;
+    background-color: #9223e3;
     border: none;
-    border-radius: 10px;
+    border-radius: 35px;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .intro_button:hover {
-    background-color: #f05; /* червоний колір при наведенні */
-    color: #fff; /* змінюємо колір тексту на білий при наведенні */
+    background-color: #ffffff; /* колір при наведенні */
 }
+.platform-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #A15FFF;
+    color: #ffffff;
+    width: 100%;
+    height: 900px;
+    margin-top: 50px;
+}
+
+.platform-info .info-text {
+    max-width: 50%;
+    text-align: left;
+    margin-right: 20px;
+}
+.platform-info .info-text p{
+    font-family: 'Avenir Next';
+    font-weight: normal;
+    font-size: 20px; /* Задайте розмір шрифту за необхідності */
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px; /* Відступ між підзаголовком і основним заголовком */
+    color: #ffffff;
+}
+
+.platform-info .info-text h2 {
+    font-size: 80px;
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-left: 50px;
+}
+.platform-info .description {
+    font-family: 'Avenir Next';
+    width:387px;
+    font-weight: normal;
+    margin-left: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+    line-height: 1.6;
+    text-align: left; /* Вирівнювання по лівій стороні */
+}
+.platform-info .info-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 50%;
+}
+
+/* Основна картинка (на задньому плані) */
+/* Основний фрейм */
+.phone-frame {
+    margin-right: 150px;
+    position: relative;
+    background-color: #000;
+    width: 434px;
+    height: 844px;
+    border-radius: 25px;
+    z-index: 1;
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Перекриваюча картинка */
+.overlay-image {
+    position: absolute;
+    top: 110px; /* Піднімає накладену картинку вище */
+    right: -200px; /* Встановлюємо відступ справа на 20px */
+    transform: rotate(5deg);
+    width: 110%; /* Зменшено для відповідного масштабу */
+    z-index: 2; /* Має бути більше за z-index основного фрейму */
+}
+
+

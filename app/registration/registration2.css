@@ -1,0 +1,59 @@
+
+.right-panel h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.right-panel h3 {
+    font-weight: normal;
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.bank {
+    height: 341px;
+    border-radius: 20px;
+    padding: 20px;
+    width: 439px;
+    box-shadow: 0 0 10px rgb(3, 3, 3);
+    border: 1px solid #ffffff;
+}
+
+.bank-option {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bank-option:hover {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+}
+
+.bank-logo {
+    width: 55px;
+    height: 55px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.bank-option span {
+    color: white;
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+.bank-option:not(:last-child) {
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.bank-option:not(:first-child) {
+    padding-top: 10px;
+}
+.bank-option.active {
+    background-color:  #1a1a1a; /* Зміна фону на фіолетовий */
+    border-radius: 20px;
+}
