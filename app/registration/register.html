@@ -7,43 +7,44 @@
   <title>Startup Registration</title>
   <link rel="stylesheet" href="register_css.css">
   <link rel="stylesheet" href="../main/additional.css">
-  <link rel="stylesheet" href="../login/photo.css"></head>
+  <link rel="stylesheet" href="../login/photo.css">
+</head>
 <link rel="stylesheet" href="registration4.css">
 
 
 <body>
-<main>
-  <div class="container">
-    <div class="left-panel">
-      <div class="phone-frame">
-        <img src="../images/phone_mockup.png" alt="Main Image" class="main-image">
-        <img src="../images/virtual_reality.png" alt="Overlay Image" class="overlay-image">
-        <h1>Обирай. <br> Інвестуй.</h1>
+  <main>
+    <div class="container">
+      <div class="left-panel">
+        <div class="phone-frame">
+          <img src="../images/phone_mockup.png" alt="Main Image" class="main-image">
+          <img src="../images/virtual_reality.png" alt="Overlay Image" class="overlay-image">
+          <h1>Обирай. <br> Інвестуй.</h1>
+        </div>
+      </div>
+      <div class="right-panel">
+
+        <form id="register-form" action="#" method="post">
+          <h2>Реєстрація</h2>
+          <input type="text" id="name" name="name" placeholder="Ім'я" required>
+          <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
+          <input type="email" id="startup-email" name="email" placeholder="Ваш email" required>
+          <input type="password" id="password" name="password" placeholder="Пароль" required>
+
+          <button type="submit" class="button">Створити</button>
+        </form>
       </div>
     </div>
-    <div class="right-panel">
-
-      <form id="register-form" action="#" method="post">
-        <h2>Реєстрація</h2>
-        <input type="text" id="name" name="name" placeholder="Ім'я" required>
-        <input type="text" id="surname" name="surname" placeholder="Прізвище" required>
-        <input type="email" id="startup-email" name="email" placeholder="Ваш email" required>
-        <input type="password" id="password" name="password" placeholder="Пароль" required>
-
-        <button type="submit" class="button">Створити</button>
-      </form>
-    </div>
-  </div>
 
 
-  <script>
-    document.getElementById('register-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      window.location.href = 'registerStartup2.html';
-    });
-  </script>
+    <script>
+      document.getElementById('register-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        window.location.href = 'registerStartup2.html';
+      });
+    </script>
 
-</main>
+  </main>
 
 
 

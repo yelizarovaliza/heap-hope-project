@@ -5,7 +5,7 @@ const dislike = document.querySelector("#dislike");
 
 const startups = JSON.parse(localStorage.getItem("startups")) || [];
 
-let cardCount = 0; // Лічильник карток
+let cardCount = 0; // cards counter
 let zIndexCounter = startups.length;
 
 function appendNewCard() {

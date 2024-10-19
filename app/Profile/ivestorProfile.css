@@ -1,49 +1,52 @@
 /* Reset default styles */
-body, h2, p, div {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height of the viewport */
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
 }
 
 .container {
-    text-align: center; /* Center text in the container */
-    max-width: 600px; /* Limit the maximum width */
-    margin: 0 auto; /* Center the container */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .profile-details p {
-    margin: 10px 0;
-    font-size: 18px; /* Increase font size */
+  margin: 10px 0;
+  font-size: 18px;
 }
 
 .presentation-image {
-    max-width: 100%;
-    height: auto; /* Responsive image */
-    margin-top: 15px;
-    border-radius: 8px; /* Rounded corners for the image */
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
 }
 
 .not-found {
-    margin: 20px 0;
-    font-size: 20px; /* Larger font for the not found message */
-    color: #e74c3c; /* Red color for emphasis */
+  margin: 20px 0;
+  font-size: 20px;
+  color: #e74c3c;
 }

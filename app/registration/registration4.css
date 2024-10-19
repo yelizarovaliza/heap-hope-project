@@ -1,5 +1,5 @@
 body {
-    background-color: #000; /* Чорний фон */
+    background-color: #000; 
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
@@ -31,34 +31,33 @@ input[type="text"], input[type="email"], input[type="password"] {
     margin: 10px 0;
     border-radius: 20px;
     border: none;
-    background-color: #720DFF; /* Фіолетовий фон для полів */
+    background-color: #720DFF;
     color: white;
     font-size: 1em;
     text-align: center;
-    transition: background-color 0.3s, color 0.3s; /* Додаємо анімацію для плавного переходу */
-}
+    transition: background-color 0.3s, color 0.3s; 
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
-    background-color: #fff; /* Білий фон при фокусі */
-    color: black; /* Чорний текст при фокусі */
-    outline: none; /* Прибираємо стандартний контур */
+    background-color: #fff; 
+    color: black; 
+    outline: none; 
 }
 
 input::placeholder {
-    color: #fff; /* Білий текст для плейсхолдера */
+    color: #fff; 
 }
 
 input[type="text"]:focus::placeholder,
 input[type="email"]:focus::placeholder,
 input[type="password"]:focus::placeholder {
-    color: transparent; /* Прибираємо текст плейсхолдера при фокусі */
+    color: transparent; 
 }
 
 
 button {
-    background-color: #fff; /* Білий фон для кнопки */
+    background-color: #fff; 
     color: black;
     padding: 15px;
     border: none;
@@ -70,5 +69,6 @@ button {
 }
 
 button:hover {
-    background-color: #720DFF; /* Зміна кольору при наведенні */
+    background-color: #720DFF; 
+}
 }

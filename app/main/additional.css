@@ -1,81 +1,78 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
 }
 
 header {
-    background-color: #000;
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
+  background-color: #000;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
 }
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 100px; /* Відступи по 100px з кожного боку */
-    width: 100%;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .social-icons a img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
 }
 .language-selector {
-    margin-left: auto; /* Pushes the language selector to the far right */
-    display: flex;
-    align-items: center;
-    font-size: 0.9em;
-    color: #fff;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  color: #fff;
 }
 
 .language-option {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 5px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
 }
 
 .language-option:hover {
-    color: #ffffff; /* Changes color on hover */
-    text-decoration: underline;
+  color: #ffffff;
+  text-decoration: underline;
 }
 .menu {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .menu .button {
-    font-family: "Nunito Sans", sans-serif;
-    padding: 10px 20px;
-    border-radius: 35px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    font-weight: normal;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 10px 20px;
+  border-radius: 35px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  font-weight: normal;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 .menu .button:hover {
-    background-color: #A15FFF;
-    color: #fff;
+  background-color: #a15fff;
+  color: #fff;
 }
-
-
-
