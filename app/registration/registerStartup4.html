@@ -7,10 +7,11 @@
     <title>Startup Registration</title>
     <link rel="stylesheet" href="register_css.css">
     <link rel="stylesheet" href="../main/additional.css">
-    <link rel="stylesheet" href="../login/photo.css"></head>
+    <link rel="stylesheet" href="../login/photo.css">
+</head>
 <link rel="stylesheet" href="registration4.css">
 <style>
-    h1{
+    h1 {
         font-size: 20px;
     }
 </style>
@@ -18,64 +19,66 @@
 
 
 <body>
-<main>
-    <div class="container">
-        <div class="left-panel">
-            <div class="phone-frame">
-                <img src="../images/phone_mockup.png" alt="Main Image" class="main-image">
-                <img src="../images/virtual_reality.png" alt="Overlay Image" class="overlay-image">
-                <h1>Обирай. <br> Інвестуй.</h1>
+    <main>
+        <div class="container">
+            <div class="left-panel">
+                <div class="phone-frame">
+                    <img src="../images/phone_mockup.png" alt="Main Image" class="main-image">
+                    <img src="../images/virtual_reality.png" alt="Overlay Image" class="overlay-image">
+                    <h1>Обирай. <br> Інвестуй.</h1>
+                </div>
+            </div>
+            <div class="right-panel">
+
+                <form id="register-form" action="#" method="post">
+                    <h2>Реєстрація</h2>
+                    <h1>Інформація про стартап</h1>
+                    <input type="text" id="description" name="description" placeholder="Напииши детальний опис стартапу"
+                        required>
+                    <input type="text" id="description2" name="description2"
+                        placeholder="Напииши короткий опис стартапу на 2 реченння" required>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+
+                    <button type="submit" class="button">Створити</button>
+                </form>
             </div>
         </div>
-        <div class="right-panel">
-
-            <form id="register-form" action="#" method="post">
-                <h2>Реєстрація</h2>
-                <h1>Інформація про стартап</h1>
-                <input type="text" id="description" name="description" placeholder="Напииши детальний опис стартапу" required>
-                <input type="text" id="description2" name="description2" placeholder="Напииши короткий опис стартапу на 2 реченння" required>
-                <input type="file" id="image" name="image" accept="image/*" required>
-
-                <button type="submit" class="button">Створити</button>
-            </form>
-        </div>
-    </div>
 
 
+        <script>
+            document.getElementById('register-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                window.location.href = 'SuccessRegistration.html';
+            });
+        </script>
+
+    </main>
     <script>
         document.getElementById('register-form').addEventListener('submit', function (event) {
             event.preventDefault();
-            window.location.href = 'SuccessRegistration.html';
+            const name = document.getElementById('name').value;
+            const surname = document.getElementById('surname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const nameStartup = document.getElementById('nameStartup').value;
+            const area = document.getElementById('area').value;
+            const amount = document.getElementById('amount').value;
+            const description = document.getElementById('description').value;
+            const description2 = document.getElementById('description2').value;
+            const image = document.getElementById('image').files[0];
+
+
+            const newStartup = { name, surname, email, password, nameStartup, area, amount, description, description2, image };
+
+
+            const startups = JSON.parse(localStorage.getItem('startups')) || [];
+            startups.push(newStartup);
+            localStorage.setItem('startups', JSON.stringify(startups));
+
+
+            window.location.href = "SuccessRegistration.html";
         });
     </script>
-
-</main>
-<script>
-    document.getElementById('register-form').addEventListener('submit', function (event) {
-        event.preventDefault();
-        const name = document.getElementById('name').value;
-        const surname = document.getElementById('surname').value;
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const nameStartup = document.getElementById('nameStartup').value;
-        const area = document.getElementById('area').value;
-        const amount = document.getElementById('amount').value;
-        const description = document.getElementById('description').value;
-        const description2 = document.getElementById('description2').value;
-        const image = document.getElementById('image').files[0];
-
-        // Створюємо об'єкт стартапу
-        const newStartup = {name,surname, email,password,nameStartup,area,amount, description, description2, image };
-
-        // Зберігаємо дані в localStorage
-        const startups = JSON.parse(localStorage.getItem('startups')) || [];
-        startups.push(newStartup);
-        localStorage.setItem('startups', JSON.stringify(startups));
-
-        // Перенаправлення на сторінку
-        window.location.href = "SuccessRegistration.html";
-    });
-</script>
 
 
 </body>

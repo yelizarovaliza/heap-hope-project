@@ -10,46 +10,60 @@
 </head>
 
 <body>
-<ion-icon id="dislike" name="heart-dislike"></ion-icon>
-<div id="swiper">
-</div>
-<ion-icon id="like" name="heart"></ion-icon>
+    <header class="header">
+        <p class="naming">HeapHope</p>
+        <button class="cabinet-button">Кабінет</button>
+    </header>
 
-<script src="../swipe/cards.js"></script>
-<script src="../swipe/swipe.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const swiper = document.getElementById('swiper');
+    <div class="main-content">
+        <img id="dislike" src="./Bitmap2.png" alt="Dislike" width="50" height="50">
+        <div id="swiper"></div>
+        <img id="like" src="./Bitmap.png" alt="Like" width="50" height="50">
+    </div>
 
-        const startups = JSON.parse(localStorage.getItem('startups')) || [];
+    <script src="../swipe/cards.js"></script>
+    <script src="../swipe/swipe.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = document.getElementById('swiper');
 
-        const createStartupCard = (startup) => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            card.innerHTML = `
-                <div class="card-content">
-                    <div class="card-image">
-                        <img src="${startup.presentation}" alt="Presentation of ${startup.startupName}" onerror="this.src='default-image-url.jpg';">
+            const startups = JSON.parse(localStorage.getItem('startups')) || [];
+
+            const createStartupCard = (startup) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-content">
+
+                        <div class="card-image">
+                            <img src="${startup.presentation}" alt="Presentation of ${startup.startupName}" onerror="this.src='default-image-url.jpg';">
+                        </div>
+                        <div class="card-info">
+                            <div class="name-budget-container">
+                            <h2 class="startup-name">${startup.startupName}</h2>
+                            <p class="budget"> ${startup.budget} грн</p>
+                            </div>
+
+                            
+                            <p class="sector">${startup.sector}</p>
+                            
+                            <p class="description"> ${startup.description}</p>
+                        </div>
+                        <button class="view-button">Переглянути</button>
                     </div>
-                    <div class="card-info">
-                        <h2 class="startup-name">${startup.startupName}</h2>
-                        <p><strong>Сектор:</strong> ${startup.sector}</p>
-                        <p><strong>Бюджет:</strong> ${startup.number} грн</p>
-                    </div>
-                </div>
-            `;
-            return card;
-        };
+                `;
+                return card;
+            };
 
-        startups.forEach((startup, index) => {
-            const card = createStartupCard(startup);
-            card.style.setProperty('--i', index);
-            swiper.appendChild(card);
+            startups.forEach((startup, index) => {
+                const card = createStartupCard(startup);
+                card.style.setProperty('--i', index);
+                swiper.appendChild(card);
+            });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>

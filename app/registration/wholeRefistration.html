@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,79 +9,80 @@
     <link rel="stylesheet" href="../registration/wholeRegister.css">
     <link rel="stylesheet" href="../login/photo.css">
     <style>
-        /* Стиль для активної кнопки */
         .role-button.active {
-            background-color: #720DFF; /* Фіолетовий фон */
-            color: #fff; /* Білий текст */
-            border-color: #720DFF; /* Фіолетова рамка */
+            background-color: #720DFF;
+            color: #fff;
+            border-color: #720DFF;
         }
     </style>
 </head>
+
 <body>
-<div class="container">
-    <div class="left-panel">
-        <div class="phone-frame">
-            <img src="../images/phone_mockup.png" alt="Main Image" class="main-image">
-            <img src="../images/virtual_reality.png" alt="Overlay Image" class="overlay-image">
-            <h1>Обирай. <br> Інвестуй.</h1>
+    <div class="container">
+        <div class="left-panel">
+            <div class="phone-frame">
+                <img src="../images/phone_mockup.png" alt="Main Image" class="main-image">
+                <img src="../images/virtual_reality.png" alt="Overlay Image" class="overlay-image">
+                <h1>Обирай. <br> Інвестуй.</h1>
+            </div>
+        </div>
+        <div class="right-panel">
+            <form id="registrationForm">
+                <h2>Регістрація</h2>
+
+                <button class="your-role" disabled>Оберіть вашу роль</button>
+
+
+                <div class="role">
+                    <button type="button" class="role-button" data-role="Інвестор">Інвестор</button>
+                    <button type="button" class="role-button" data-role="Стартапер">Стартапер</button>
+                </div>
+
+
+                <button type="submit" class="next">Далі</button>
+            </form>
         </div>
     </div>
-    <div class="right-panel">
-        <form id="registrationForm">
-            <h2>Регістрація</h2>
-            <!-- Кнопка "Оберіть вашу роль" -->
-            <button class="your-role" disabled>Оберіть вашу роль</button>
 
-            <!-- Кнопки для вибору ролі -->
-            <div class="role">
-                <button type="button" class="role-button" data-role="Інвестор">Інвестор</button>
-                <button type="button" class="role-button" data-role="Стартапер">Стартапер</button>
-            </div>
+    <script>
 
-            <!-- Кнопка "Далі" -->
-            <button type="submit" class="next">Далі</button>
-        </form>
-    </div>
-</div>
+        const roleButtons = document.querySelectorAll('.role-button');
 
-<script>
-    // Отримуємо всі кнопки з класом "role-button"
-    const roleButtons = document.querySelectorAll('.role-button');
 
-    // Змінна для зберігання вибраної ролі
-    let selectedRole = null;
+        let selectedRole = null;
 
-    // Додаємо подію для кожної кнопки
-    roleButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Видаляємо активний клас з усіх кнопок перед додаванням нової активної
-            roleButtons.forEach(btn => btn.classList.remove('active'));
 
-            // Додаємо активний клас до натиснутої кнопки
-            this.classList.add('active');
+        roleButtons.forEach(button => {
+            button.addEventListener('click', function () {
 
-            // Зберігаємо роль користувача
-            selectedRole = this.getAttribute('data-role'); // Використовуємо атрибут data-role
+                roleButtons.forEach(btn => btn.classList.remove('active'));
+
+
+                this.classList.add('active');
+
+
+                selectedRole = this.getAttribute('data-role');
+            });
         });
-    });
 
-    // Обробляємо подію на кнопці "Далі"
-    const form = document.getElementById('registrationForm');
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Зупиняємо звичайну відправку форми
 
-        // Перевіряємо, чи обрано роль
-        if (!selectedRole) {
-            alert('Будь ласка, оберіть вашу роль перед продовженням.');
-        } else {
-            // Залежно від обраної ролі, перенаправляємо на потрібну сторінку
-            if (selectedRole === 'Інвестор') {
-                window.location.href = 'RegistrationInvestors.html'; // Сторінка для інвесторів
-            } else if (selectedRole === 'Стартапер') {
-                window.location.href = 'register.html'; // Сторінка для стартаперів
+        const form = document.getElementById('registrationForm');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+
+            if (!selectedRole) {
+                alert('Будь ласка, оберіть вашу роль перед продовженням.');
+            } else {
+
+                if (selectedRole === 'Інвестор') {
+                    window.location.href = 'RegistrationInvestors.html';
+                } else if (selectedRole === 'Стартапер') {
+                    window.location.href = 'register.html';
+                }
             }
-        }
-    });
-</script>
+        });
+    </script>
 </body>
+
 </html>
