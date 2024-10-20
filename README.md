@@ -1,9 +1,8 @@
 
 # InvestHunt
 
-## InvestHunt is a platform for supporting startups of military, veterans and IDPs.
+<h3>InvestHunt is a platform for supporting startups of military, veterans and IDPs.</h3>
 
----
 
   - Startups can register their projects (health, drones, technology, etc.), necessarily having a business plan and undergoing verification.
 
@@ -14,7 +13,7 @@
 ## Our current features:
 
 1. Home Page: Provides user registration and login functionality.
-2. Swipe Cards: Allows users to explore options through a card-swiping interface.
+2. Swipe Cards: Allows users to explore options through a card-swiping interface.(in process)
 
 ## Our plans and unrealized functionality:
 1. Implementation of the system of swipes, startup matching algorithm, and rating mechanism.
@@ -27,7 +26,7 @@
 
 ## Technology Stack🖥️
 
-The platform is currently developed using **JavaScript** and **CSS**. We plan to evolve it to a more professional level, utilizing advanced technologies and best practices. 
+The platform is currently developed using **JavaScript** **HTML** and **CSS**. We plan to evolve it to a more professional level, utilizing advanced technologies and best practices. 
 
 ### Future Enhancements:
 - **Frontend Frameworks**:  **React** 
