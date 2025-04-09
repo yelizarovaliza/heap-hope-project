@@ -5,18 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startup Registration</title>
-    <link rel="stylesheet" href="register_css.css">
     <link rel="stylesheet" href="../main/additional.css">
     <link rel="stylesheet" href="../login/photo.css">
+    <link rel="stylesheet" href="registration4.css">
 </head>
-<link rel="stylesheet" href="registration4.css">
-<style>
-    h1 {
-        font-size: 20px;
-    }
-</style>
-
-
 
 <body>
     <main>
@@ -32,14 +24,19 @@
 
                 <form id="register-form" action="#" method="post">
                     <h2>Реєстрація</h2>
-                    <h1>Інформація про стартап</h1>
-                    <input type="text" id="description" name="description" placeholder="Напииши детальний опис стартапу"
+                    <input type="text" id="description" name="description"
+                           placeholder="Напиши детальний опис стартапу"
                         required>
                     <input type="text" id="description2" name="description2"
-                        placeholder="Напииши короткий опис стартапу на 2 реченння" required>
-                    <input type="file" id="image" name="image" accept="image/*" required>
+                        placeholder="Напиши короткий опис стартапу на 2 реченння" required>
+                    <form>
+                        <label for="image" class="custom-file-upload">
+                            Обрати файл
+                        </label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
+                        <button type="submit" class="button">Створити</button>
+                    </form>
 
-                    <button type="submit" class="button">Створити</button>
                 </form>
             </div>
         </div>

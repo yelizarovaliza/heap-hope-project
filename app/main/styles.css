@@ -17,7 +17,7 @@ header {
 }
 
 main {
-  margin-top: 900px;
+  margin-top: 1400px;
   padding-bottom: 100px;
   display: flex;
   align-items: center;
@@ -109,6 +109,7 @@ main {
   max-width: 50%;
   text-align: left;
   margin-right: 20px;
+  margin-left: 70px;
 }
 .platform-info .info-text p {
   font-family: "Avenir Next";
@@ -121,7 +122,7 @@ main {
 }
 
 .platform-info .info-text h2 {
-  font-size: 80px;
+  font-size: 70px;
   font-family: "Arial Black", Arial, sans-serif;
   font-weight: bold;
   line-height: 1.1;
@@ -137,11 +138,115 @@ main {
   line-height: 1.6;
   text-align: left;
 }
-
-.platform-info .info-image {
+.info-image {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  max-width: 50%;
+  margin-top: 50px;
 }
+
+.phone-frame {
+  position: relative;
+  width: 340px; /* адаптуй за потреби */
+  height: auto;
+  margin-right: 170px;
+}
+
+.phone-frame .main-image {
+  width: 90%;
+  display: block;
+  border-radius: 50px;
+}
+
+.phone-frame .overlay-image {
+  position: absolute;
+  width: 110%;
+  bottom: 25%;
+  right: -30%;
+  transform: rotate(-5deg);
+  border-radius: 20px;
+}
+
+.startup-section {
+  background: radial-gradient(circle at center, #1a1a1a, #000);
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.startup-section h2 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.startup-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: #111;
+  border: 2px solid #8e67ff;
+  border-radius: 16px;
+  width: 280px;
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  display: block;
+  max-width: 90%;
+  margin-top: 10px;
+  margin-left: 13px;
+  margin-right: 5px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+
+.card-content {
+  padding: 16px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+.more-button {
+  display: inline-block;
+  margin-top: 40px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.more-button:hover {
+  background: #8e67ff;
+}
+
+
