@@ -26,7 +26,6 @@ a {
 /* Sidebar */
 .sidebar {
     font-family: "Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", sans-serif;
-    background-color: #f9f9f9;
     color: #222;
     width: 250px;
     padding: 20px;
@@ -34,11 +33,12 @@ a {
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0 20px 20px 0;
+    background-color: #fff;
 }
 
 .user-profile {
     display: flex;
-    align-items: flex-start;
+    align-items: center;  /* Center the avatar and name vertically */
     gap: 12px;
     padding: 20px 0;
 }
@@ -53,7 +53,7 @@ a {
 .user-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;  /* Center the name vertically */
 }
 
 .user-name h2 {
@@ -65,7 +65,6 @@ a {
 }
 
 .user-role {
-    margin-top: 8px;
     background-color: #f9f9f9;
     color: #898989;
     font-size: 14px;
@@ -76,22 +75,25 @@ a {
     align-items: center;
     justify-content: center;
     font-family: "Avenir Next", sans-serif;
+    margin-top: 10px;  /* Add space between role and button */
 }
+
 
 .navigation .btn {
     display: block;
-    width: 100%;
+    width: 216px;
+    height: 43px;
     padding: 10px;
     margin-bottom: 10px;
-    border: none;
-    background-color: #eee;
-    border-radius: 8px;
+    border: black;
+    border-radius: 10px;
+    background-color: #FFFFFF;
     cursor: pointer;
     transition: background 0.2s ease;
 }
 
 .navigation .btn.primary {
-    background-color: #6b4eff;
+    background-color: #720DFF;
     color: white;
 }
 
@@ -191,13 +193,85 @@ a {
     margin-top: 10px;
 }
 
+/* Card Backgrounds by Category */
+.bg-dev {
+    background-color: #304C26; /* dark green for tech/dev */
+}
+
+.bg-health {
+    background-color: #288971; /* teal for health */
+}
+
+.bg-fashion {
+    background-color: #9F181A; /* deep red for fashion */
+}
+
+/* Card Overrides */
+.startup-card {
+    border-radius: 24px;
+    width: 260px;
+    flex-shrink: 0;
+    overflow: hidden;
+    color: #fff;
+    position: relative;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Image wrapper so tag can go inside */
+.image-wrapper {
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 10px;
+}
+
+/* Overlay tag */
+.tag {
+    position: absolute;
+    bottom: 10px;
+    left: 16px;
+    background-color: #720DFF;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+/* Card Info */
+.card-info {
+    padding: 10px 20px 0;
+}
+
+.card-info h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card-info p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Like Icon */
 .like-icon {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.2rem;
-    color: #e55353;
+    bottom: 14px;
+    right: 18px;
+    font-size: 1.3rem;
+    color: #F44336;
 }
+
 
 /* Investment Section */
 .investment-section {
