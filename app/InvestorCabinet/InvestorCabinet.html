@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інвесторський Кабінет</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="user-profile">
+            <img src="/app/images/avatar.png" alt="User Avatar" class="avatar">
+            <div class="user-info">
+                <div class="user-name">
+                    <h2>Taras</h2>
+                    <h2>Shevchenko</h2>
+                </div>
+            </div>
+        </div>
+        <p class="user-role">інвестор-початківець</p>
+
+
+        <nav class="navigation">
+            <button class="btn primary">Особистий кабінет</button>
+            <button class="btn">Пошук стартапів</button>
+            <button class="btn">Надати допомогу</button>
+            <button class="btn">Покращити знання</button>
+            <button class="btn">Налаштування</button>
+        </nav>
+
+        <div class="help-card">
+            <p>Не можете обрати стартап?</p>
+            <button class="btn secondary">Пройти аналіз</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="startup-cards">
+        <!-- Card 1 -->
+        <div class="startup-card bg-dev">
+            <div class="image-wrapper">
+                <img src="/app/images/armtech.png" alt="armtech">
+                <span class="tag">розробка</span>
+            </div>
+            <div class="card-info">
+                <h4>armtech</h4>
+                <p>розробка програмного забезпечення для дронів</p>
+            </div>
+            <span class="like-icon">❤️</span>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="startup-card bg-health">
+            <div class="image-wrapper">
+                <img src="/app/images/benew.png" alt="benew">
+                <span class="tag">здоров’я</span>
+            </div>
+            <div class="card-info">
+                <h4>benew</h4>
+                <p>сучасне протезування з використанням AI</p>
+            </div>
+            <span class="like-icon">❤️</span>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="startup-card bg-fashion">
+            <div class="image-wrapper">
+                <img src="/app/images/vyshyvai.png" alt="vyshyvAI">
+                <span class="tag">одяг</span>
+            </div>
+            <div class="card-info">
+                <h4>vyshyvAI</h4>
+                <p>унікальний принт з AI</p>
+            </div>
+            <span class="like-icon">❤️</span>
+        </div>
+
+    <section class="investment-section">
+                <h3>Ви інвестували кошти у VyshyvAI!</h3>
+                <ul class="investment-links">
+                    <li>Переглянути бізнес-план <span>&rarr;</span></li>
+                    <li>Переглянути FAQ <span>&rarr;</span></li>
+                    <li>Перейти до чату <span>&rarr;</span></li>
+                    <li>Аналіз прибутковості з ШІ <span>&rarr;</span></li>
+                </ul>
+                <div class="investment-chart">
+                    <h4>Інвестовано</h4>
+                    <p>$10 000</p>
+                    <!-- Placeholder for donut chart -->
+                    <div class="chart-placeholder"></div>
+                    <div class="legend">
+                        <ul>
+                            <li><span class="color education"></span> Освіта</li>
+                            <li><span class="color army"></span> Армія</li>
+                            <li><span class="color dev"></span> Розробка</li>
+                            <li><span class="color ai"></span> Штучний інтелект</li>
+                            <li><span class="color urban"></span> Урбанізм</li>
+                        </ul>
+                    </div>
+                    <button class="btn disabled">Детальніше</button>
+                </div>
+            </section>
+        </div>
+<!--    </main>-->
+</div>
+</body>
+</html>

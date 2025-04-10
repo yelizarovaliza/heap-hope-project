@@ -78,6 +78,6 @@ nav {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .menu .button:hover {
-  background-color: #a15fff;
+  background-color: #720DFF;
   color: #fff;
 }

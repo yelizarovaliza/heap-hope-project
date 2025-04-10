@@ -1,0 +1,390 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout */
+.app-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+}
+
+/* Sidebar */
+.sidebar {
+    font-family: "Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", sans-serif;
+    color: #222;
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0 20px 20px 0;
+    background-color: #fff;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;  /* Center the avatar and name vertically */
+    gap: 12px;
+    padding: 20px 0;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center the name vertically */
+}
+
+.user-name h2 {
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.user-role {
+    background-color: #f9f9f9;
+    color: #898989;
+    font-size: 14px;
+    width: 224px;
+    height: 22px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Avenir Next", sans-serif;
+    margin-top: 10px;  /* Add space between role and button */
+}
+
+
+.navigation .btn {
+    display: block;
+    width: 216px;
+    height: 43px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: black;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.navigation .btn.primary {
+    background-color: #720DFF;
+    color: white;
+}
+
+.navigation .btn:hover:not(.primary) {
+    background-color: #ddd;
+}
+
+.help-card {
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.help-card p {
+    margin-bottom: 10px;
+}
+
+.help-card .btn.secondary {
+    background-color: #7e3af2;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Main Content */
+
+.main-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.main-section-box {
+    background-color: #F5F5F5;
+    width: 1351px;
+    height: 1110px;
+    border-radius: 50px;
+    padding: 40px;
+    margin: 0 auto;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.favorites-section h3,
+.investment-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.startup-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    height: 184px;
+}
+
+.startup-card {
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: 250px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.startup-card img {
+    width: 100%;
+    height: 30px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h4 {
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: #FFFFFF;
+}
+
+.tag {
+    background-color: #d8d8f6;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Card Backgrounds by Category */
+.bg-dev {
+    background-color: #304C26; /* dark green for tech/dev */
+}
+
+.bg-health {
+    background-color: #288971; /* teal for health */
+}
+
+.bg-fashion {
+    background-color: #9F181A; /* deep red for fashion */
+}
+
+/* Card Overrides */
+.startup-card {
+    border-radius: 20px;
+    width: 300px;
+    flex-shrink: 0;
+    overflow: hidden;
+    color: #F5F5F5;
+    position: relative;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Image wrapper so tag can go inside */
+.image-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.image-wrapper img {
+    width: 180px;
+    height: 122px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+/* Overlay tag */
+.tag {
+    position: absolute;
+    bottom: 13px;
+    right: 16px;
+    background-color: #720DFF;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 6px;
+    border-radius: 12px;
+}
+
+/* Card Info */
+.card-info {
+    padding: 10px 20px 0;
+}
+
+.card-info h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.card-info p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Like Icon */
+.like-icon {
+    position: absolute;
+    bottom: 14px;
+    right: 18px;
+    font-size: 1.3rem;
+    color: #F44336;
+}
+
+
+/* Investment Section */
+.investment-section {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.investment-links {
+    list-style: none;
+    flex: 1;
+}
+
+.investment-links li {
+    margin-bottom: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.investment-links li span {
+    float: right;
+    color: #888;
+}
+
+.investment-chart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.investment-chart h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.investment-chart p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.chart-placeholder {
+    width: 100%;
+    height: 180px;
+    background: conic-gradient(
+            #6b4eff 0 20%,
+            #ff9f43 20% 40%,
+            #ea5455 40% 60%,
+            #28c76f 60% 80%,
+            #7367f0 80% 100%
+    );
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.legend ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.legend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.legend .color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.education { background-color: #6b4eff; }
+.army { background-color: #28c76f; }
+.dev { background-color: #ff9f43; }
+.ai { background-color: #ea5455; }
+.urban { background-color: #7367f0; }
+
+.btn.disabled {
+    background-color: #ddd;
+    color: #999;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .investment-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
