@@ -62,7 +62,7 @@ main {
 }
 
 .intro h1 span {
-  color: #a55eea;
+  color: #720DFF;
 }
 
 .intro p {
@@ -82,7 +82,7 @@ main {
   font-size: 20px;
   font-weight: bold;
   color: #000;
-  background-color: #9223e3;
+  background-color: #720DFF;
   border: none;
   border-radius: 35px;
   text-decoration: none;
@@ -98,7 +98,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 50px;
-  background-color: #a15fff;
+  background-color: #720DFF;
   color: #ffffff;
   width: 100%;
   height: 900px;
@@ -192,7 +192,7 @@ main {
 
 .card {
   background-color: #111;
-  border: 2px solid #8e67ff;
+  border: 2px solid #720DFF;
   border-radius: 16px;
   width: 280px;
   overflow: hidden;
@@ -246,7 +246,7 @@ main {
 }
 
 .more-button:hover {
-  background: #8e67ff;
+  background: #720DFF;
 }
 
 
