@@ -13,15 +13,15 @@
 ## Our current features:
 
 1. Home Page: Provides user registration and login functionality.
-2. Swipe Cards: Allows users to explore options through a card-swiping interface.(in process)
+2. Sign in / Sign up pages for startups and inverstors
+3. Personal cabinets for startups and investors
 
 ## Our plans and unrealized functionality:
-1. Implementation of the system of swipes, startup matching algorithm, and rating mechanism.
+1. Implementation of the system of startup matching algorithm.
 2. Identity verification and integration of banking services.
-3. Add dedicated pages for startup founders and investors.
-4. Create achievements for investors who support startups.
-5. Integrate a messenger between startups and investors on the platform.
-6. Add language switch functionality
+3. Create achievements for investors who support startups.
+4. Integrate a messenger between startups and investors on the platform.
+5. Add language switch functionality.
 
 
 ## Technology Stack🖥️
@@ -30,16 +30,11 @@ The platform is currently developed using **JavaScript** **HTML** and **CSS**. W
 
 ### Future Enhancements:
 - **Frontend Frameworks**:  **React** 
-- **TypeScript**: to enhance code quality, readability, and maintainability.
-- **Workflow Automation**:  **Node-RED** for efficient workflow automation 
+
 
 
 ## Current Status:
-
-1.Presentation:
-
-https://www.figma.com/slides/UaoRMZ5MqJODKDNRAqWrdn/Untitled?node-id=1-145&t=MSUDxXpoQ5SDIW2c-1
   
-2.Site design in figma:
+Site design in figma:
 
   [https://www.figma.com/slides/UaoRMZ5MqJODKDNRAqWrdn/Untitled?node-id=1-145&t=MSUDxXpoQ5SDIW2c-1](https://www.figma.com/design/nocttfGx6AwgAyy9nbLMn6/hackaton.HeapHope?node-id=0-1&t=xvgCmCIl5KI0Bezx-1)
